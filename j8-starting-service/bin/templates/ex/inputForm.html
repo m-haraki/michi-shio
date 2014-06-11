@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>入力フォーム</title> 
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/form.css" />
+</head>
+<body>
+    <form action="#" th:action="@{/example/tranForm}" th:object="${formDao}" method="post">
+    	<p>
+    		<span>テキスト:</span>
+    		<input type="text" th:field="*{text}" />
+    	</p>
+    	<p>
+    		<span>セレクト:</span>
+    		<select th:field="*{select}">
+    			<option th:value="1">男</option>
+    			<option th:value="2">女</option>
+    		</select>
+    	</p>
+    	<p>
+    		<span>ラジオ:</span>
+    		<input type="radio" th:field="*{radio}" th:value="1" />Yes
+    		<input type="radio" th:field="*{radio}" th:value="2" />No
+    	</p>
+    	<p>
+    		<span><input type="submit" /></span>
+    	</p>
+    </form>
+</body>
+</html>

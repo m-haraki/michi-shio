@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>確認フォーム</title> 
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/form.css" />
+</head>
+<body>
+	<p>
+		<span>テキスト:</span>
+		<label th:text="${formDao.text}"></label>
+	</p>
+	<p>
+		<span>セレクトボックス:</span>
+		<label th:text="男" th:if="${formDao.select} == 1"></label>
+		<label th:text="女" th:if="${formDao.select} == 2"></label>
+	</p>
+	<p>
+		<span>ラジオボタン:</span>
+		<label th:text="Yes" th:if="${formDao.radio} == 1"></label>
+		<label th:text="No" th:if="${formDao.radio} == 2"></label>
+	</p>
+    <a href="/example">Exampleへ戻る</a>
+</body>
+</html>
