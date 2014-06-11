@@ -1,1 +1,1 @@
-sample
+This project is sample-app
