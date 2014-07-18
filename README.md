@@ -1,1 +1,1 @@
-This project is sample-app desu
+This project is sample-app master
